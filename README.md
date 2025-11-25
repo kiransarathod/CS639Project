@@ -1,7 +1,7 @@
 # CS639 Project – Mindful Minutes
 
 ## Idea Proposal & Research
-https://paceuniversity-my.sharepoint.com/:w:/g/personal/kr45959n_pace_edu/EV7zlUnoUmJPmWwz1jRBV2QBxK3JVx0ETLL3YWBMLzk2mQ?e=pOwoGV
+[Mindful Minutes]([https://your-link-here](https://paceuniversity-my.sharepoint.com/:w:/g/personal/kr45959n_pace_edu/EV7zlUnoUmJPmWwz1jRBV2QBxK3JVx0ETLL3YWBMLzk2mQ?e=pOwoGV))
 
 Team Members:
 - Kiran Rathod
