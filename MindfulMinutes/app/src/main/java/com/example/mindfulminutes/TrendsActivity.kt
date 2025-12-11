@@ -1,5 +1,6 @@
 package com.example.mindfulminutes
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,7 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -25,48 +26,32 @@ class TrendsActivity : ComponentActivity() {
 @Composable
 fun TrendsScreen() {
     val context = LocalContext.current
-    val sharedPref = context.getSharedPreferences("mood_data", ComponentActivity.MODE_PRIVATE)
-
+    val sharedPref = context.getSharedPreferences("mood_data", Context.MODE_PRIVATE)
     val moods = listOf("😃", "🙂", "😐", "😔", "😢")
+    val moodList = sharedPref.all.toSortedMap()
 
-    val moodList = sharedPref.all
-        .toSortedMap()
-        .map { (timestamp, rawValue) ->
-            val parts = rawValue.toString().split("|")
-            MoodEntry(
-                timestamp = timestamp,
-                mood = moods[parts[0].toInt()],
-                stress = parts[1],
-                notes = parts.getOrNull(2) ?: ""
-            )
-        }
-
-    Scaffold(
-        topBar = { TopAppBar(title = { Text("Mood Trends") }) }
-    ) { paddingValues ->
-        LazyColumn(
-            Modifier
+    Scaffold(topBar = { TopAppBar(title = { Text("Mood Trends") }) }) { paddingValues ->
+        Column(
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(20.dp)
+                .padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            items(moodList) { item ->
-                Column(Modifier.padding(8.dp)) {
-                    Text("Mood: ${item.mood}", style = MaterialTheme.typography.bodyLarge)
-                    Text("Stress: ${item.stress}")
-                    if (item.notes.isNotBlank()) {
-                        Text("Notes: ${item.notes}")
-                    }
-                    Divider(Modifier.padding(vertical = 12.dp))
+            Text("Your Mood History", style = MaterialTheme.typography.headlineMedium)
+            Spacer(Modifier.height(16.dp))
+
+            LazyColumn(modifier = Modifier.fillMaxWidth()) {
+                items(moodList.keys.toList()) { key ->
+                    val value = sharedPref.getString(key, "2") ?: "2"
+                    val parts = value.split("|")
+                    val mood = moods.getOrElse(parts[0].toInt()) { "😐" }
+                    val stress = parts.getOrNull(1) ?: ""
+                    val notes = parts.getOrNull(2) ?: ""
+                    Text("Mood: $mood, Stress: $stress, Notes: $notes")
+                    Spacer(Modifier.height(8.dp))
                 }
             }
         }
     }
 }
-
-data class MoodEntry(
-    val timestamp: String,
-    val mood: String,
-    val stress: String,
-    val notes: String
-)

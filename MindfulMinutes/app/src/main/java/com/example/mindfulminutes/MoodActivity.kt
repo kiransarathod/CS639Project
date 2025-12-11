@@ -1,10 +1,10 @@
 package com.example.mindfulminutes
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -30,42 +30,37 @@ fun MoodScreen() {
     var stress by remember { mutableStateOf(3f) }
     var notes by remember { mutableStateOf("") }
 
-    Scaffold(
-        topBar = { TopAppBar(title = { Text("Mood Check-In") }) }
-    ) { paddingValues ->
+    Scaffold(topBar = { TopAppBar(title = { Text("Mood Check-In") }) }) { paddingValues ->
         Column(
-            Modifier
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(20.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-
             Text("How are you feeling today?", style = MaterialTheme.typography.headlineMedium)
             Spacer(Modifier.height(16.dp))
 
-            Row(horizontalArrangement = Arrangement.SpaceEvenly) {
+            Text("Stress Level: ${stress.toInt()}")
+            Slider(value = stress, onValueChange = { stress = it }, valueRange = 1f..5f)
+            Spacer(Modifier.height(16.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
                 moods.forEachIndexed { index, emoji ->
                     Button(
                         onClick = { selectedMood = index },
                         colors = ButtonDefaults.buttonColors(
-                            if (selectedMood == index)
-                                MaterialTheme.colorScheme.primary
-                            else MaterialTheme.colorScheme.surface
+                            containerColor = if (selectedMood == index)
+                                MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface
                         ),
                         modifier = Modifier.padding(4.dp)
                     ) { Text(emoji) }
                 }
             }
-
-            Spacer(Modifier.height(24.dp))
-
-            Text("Stress Level: ${stress.toInt()}")
-            Slider(
-                value = stress,
-                onValueChange = { stress = it },
-                valueRange = 1f..5f
-            )
 
             Spacer(Modifier.height(24.dp))
 
@@ -81,18 +76,15 @@ fun MoodScreen() {
             Button(
                 onClick = {
                     if (selectedMood != -1) {
-                        val sharedPref = context.getSharedPreferences("mood_data", ComponentActivity.MODE_PRIVATE)
+                        val sharedPref = context.getSharedPreferences("mood_data", Context.MODE_PRIVATE)
                         val editor = sharedPref.edit()
-
                         val timestamp = System.currentTimeMillis().toString()
                         editor.putString(timestamp, "$selectedMood|${stress.toInt()}|$notes")
                         editor.apply()
                     }
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Save Mood")
-            }
+            ) { Text("Save Mood") }
         }
     }
 }

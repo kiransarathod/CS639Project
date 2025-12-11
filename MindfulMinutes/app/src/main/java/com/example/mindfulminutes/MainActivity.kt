@@ -35,35 +35,20 @@ fun HomeScreen(
     onBreathingClick: () -> Unit,
     onTrendsClick: () -> Unit
 ) {
-    Scaffold(
-        topBar = { TopAppBar(title = { Text("Mindful Minutes") }) }
-    ) { paddingValues ->
+    Scaffold(topBar = { TopAppBar(title = { Text("Mindful Minutes") }) }) { paddingValues ->
         Column(
-            Modifier
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(20.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(
-                onClick = onMoodClick,
-                modifier = Modifier.fillMaxWidth()
-            ) { Text("Mood Check-In") }
-
+            Button(onClick = onMoodClick, modifier = Modifier.fillMaxWidth()) { Text("Mood Check-In") }
             Spacer(Modifier.height(16.dp))
-
-            Button(
-                onClick = onBreathingClick,
-                modifier = Modifier.fillMaxWidth()
-            ) { Text("1-Minute Breathing") }
-
+            Button(onClick = onBreathingClick, modifier = Modifier.fillMaxWidth()) { Text("1-Minute Breathing") }
             Spacer(Modifier.height(16.dp))
-
-            Button(
-                onClick = onTrendsClick,
-                modifier = Modifier.fillMaxWidth()
-            ) { Text("Mood Trends") }
+            Button(onClick = onTrendsClick, modifier = Modifier.fillMaxWidth()) { Text("Mood Trends") }
         }
     }
 }

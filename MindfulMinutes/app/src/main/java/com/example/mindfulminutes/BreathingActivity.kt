@@ -35,16 +35,14 @@ fun BreathingScreen() {
         }
     }
 
-    Scaffold(
-        topBar = { TopAppBar(title = { Text("Breathing Exercise") }) }
-    ) { paddingValues ->
+    Scaffold(topBar = { TopAppBar(title = { Text("Breathing Exercise") }) }) { paddingValues ->
         Box(
-            Modifier
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
-            Alignment.Center
+            contentAlignment = Alignment.Center
         ) {
-            Text(text, style = MaterialTheme.typography.headlineLarge)
+            Text(text = text, style = MaterialTheme.typography.headlineLarge)
         }
     }
 }
