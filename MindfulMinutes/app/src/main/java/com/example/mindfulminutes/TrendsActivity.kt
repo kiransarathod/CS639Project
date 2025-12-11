@@ -45,9 +45,10 @@ fun TrendsScreen() {
                 items(moodList.keys.toList()) { key ->
                     val value = sharedPref.getString(key, "2") ?: "2"
                     val parts = value.split("|")
-                    val mood = moods.getOrElse(parts[0].toInt()) { "😐" }
+                    val moodIndex = parts.getOrNull(0)?.toIntOrNull() ?: 2 // default 😐
                     val stress = parts.getOrNull(1) ?: ""
                     val notes = parts.getOrNull(2) ?: ""
+                    val mood = moods.getOrElse(moodIndex) { "😐" }
                     Text("Mood: $mood, Stress: $stress, Notes: $notes")
                     Spacer(Modifier.height(8.dp))
                 }
