@@ -25,8 +25,11 @@ class TrendsActivity : ComponentActivity() {
 @Composable
 fun TrendsScreen() {
     // Example: Display simple mood trends (replace with real data later)
+    val context = LocalContext.current
+    val sharedPref = context.getSharedPreferences("mood_data", ComponentActivity.MODE_PRIVATE)
+
     val moods = listOf("😃", "🙂", "😐", "😔", "😢")
-    val lastWeekMood = listOf(0, 1, 2, 1, 0, 3, 4) // sample indices
+    val moodList = sharedPref.all.toSortedMap()
 
     Scaffold(
         topBar = { TopAppBar(title = { Text("Mood Trends") }) }
@@ -42,9 +45,10 @@ fun TrendsScreen() {
             Text("Your Mood This Week", style = MaterialTheme.typography.headlineMedium)
             Spacer(modifier = Modifier.height(16.dp))
 
-            Column {
-                lastWeekMood.forEachIndexed { day, moodIndex ->
-                    Text("Day ${day + 1}: ${moods[moodIndex]}", style = MaterialTheme.typography.bodyLarge)
+            LazyColumn {
+                items(moodList.keys.toList()) { key ->
+                    val value = sharedPref.getString(key, "2") ?: "2"
+                    Text("Entry: $key → ${moods[value.toInt()]}")
                     Spacer(modifier = Modifier.height(8.dp))
                 }
             }
