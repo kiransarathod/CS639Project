@@ -60,7 +60,14 @@ fun MoodScreen() {
 
             Spacer(modifier = Modifier.height(24.dp))
             Button(onClick = {
-                // TODO: Save mood with SharedPreferences / Firebase
+                if (selectedMood != -1) {
+                    val sharedPref = context.getSharedPreferences("mood_data", ComponentActivity.MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+
+                    val timestamp = System.currentTimeMillis().toString()
+                    editor.putString(timestamp, selectedMood.toString())
+                    editor.apply()
+                }
             }) {
                 Text("Save Mood")
             }
