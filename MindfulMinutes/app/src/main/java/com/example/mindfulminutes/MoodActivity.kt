@@ -26,7 +26,8 @@ class MoodActivity : ComponentActivity() {
 @Composable
 fun MoodScreen() {
     val context = LocalContext.current  // <-- Proper import
-    var selectedMood by remember { mutableStateOf(-1) }
+    var selectedMood by remember { mutableStateOf(-1)
+    var stress by remember { mutableStateOf(3f) }
 
     Scaffold(
         topBar = { TopAppBar(title = { Text("Mood Check-In") }) }
@@ -44,6 +45,13 @@ fun MoodScreen() {
 
             // Simple 5-emoji mood selector
             val moods = listOf("😃", "🙂", "😐", "😔", "😢")
+            Text("Stress level: ${stress.toInt()}", style = MaterialTheme.typography.bodyLarge)
+            Slider(
+                value = stress,
+                onValueChange = { stress = it },
+                valueRange = 1f..5f,
+                modifier = Modifier.padding(top = 16.dp)
+            )
             Row(horizontalArrangement = Arrangement.SpaceEvenly) {
                 moods.forEachIndexed { index, emoji ->
                     Button(
