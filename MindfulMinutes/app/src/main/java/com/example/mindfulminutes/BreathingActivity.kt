@@ -11,14 +11,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
-// Add this OptIn annotation to acknowledge experimental API usage
 @OptIn(ExperimentalMaterial3Api::class)
 class BreathingActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            BreathingScreen()
-        }
+        setContent { BreathingScreen() }
     }
 }
 
@@ -27,7 +24,6 @@ class BreathingActivity : ComponentActivity() {
 fun BreathingScreen() {
     var text by remember { mutableStateOf("Inhale…") }
 
-    // Simple breathing cycle: Inhale (4s), Hold (2s), Exhale (4s)
     LaunchedEffect(Unit) {
         while (true) {
             text = "Inhale…"
@@ -43,15 +39,12 @@ fun BreathingScreen() {
         topBar = { TopAppBar(title = { Text("Breathing Exercise") }) }
     ) { paddingValues ->
         Box(
-            modifier = Modifier
+            Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
-            contentAlignment = Alignment.Center
+            Alignment.Center
         ) {
-            Text(
-                text = text,
-                style = MaterialTheme.typography.headlineLarge
-            )
+            Text(text, style = MaterialTheme.typography.headlineLarge)
         }
     }
 }
