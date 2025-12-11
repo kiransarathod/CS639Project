@@ -28,7 +28,7 @@ fun TrendsScreen() {
     val context = LocalContext.current
     val sharedPref = context.getSharedPreferences("mood_data", Context.MODE_PRIVATE)
     val moods = listOf("😃", "🙂", "😐", "😔", "😢")
-    val moodList = sharedPref.all.toSortedMap()
+    val moodList = sharedPref.all.toSortedMap()  // sorted by timestamp
 
     Scaffold(topBar = { TopAppBar(title = { Text("Mood Trends") }) }) { paddingValues ->
         Column(
@@ -43,12 +43,12 @@ fun TrendsScreen() {
 
             LazyColumn(modifier = Modifier.fillMaxWidth()) {
                 items(moodList.keys.toList()) { key ->
-                    val value = sharedPref.getString(key, "2") ?: "2"
+                    val value = sharedPref.getString(key, "2|3|") ?: "2|3|"
                     val parts = value.split("|")
-                    val moodIndex = parts.getOrNull(0)?.toIntOrNull() ?: 2 // default 😐
+                    val moodIndex = parts.getOrNull(0)?.toIntOrNull() ?: 2
+                    val mood = moods.getOrElse(moodIndex) { "😐" }
                     val stress = parts.getOrNull(1) ?: ""
                     val notes = parts.getOrNull(2) ?: ""
-                    val mood = moods.getOrElse(moodIndex) { "😐" }
                     Text("Mood: $mood, Stress: $stress, Notes: $notes")
                     Spacer(Modifier.height(8.dp))
                 }
