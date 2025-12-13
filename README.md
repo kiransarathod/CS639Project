@@ -92,6 +92,17 @@ Data persistence and analytics: In progress
 
 Final polish and optimization: Planned
 
+**Here is the screenshot illustrating the app workflow.**
+<img width="115" height="255" alt="image" src="https://github.com/user-attachments/assets/dfa348ca-41e5-48ea-bf04-784eb26c5199" />
+<img width="115" height="255" alt="image" src="https://github.com/user-attachments/assets/cbff927a-246b-491c-8765-dd810489591f" />
+<img width="291" height="648" alt="image" src="https://github.com/user-attachments/assets/f9e28bea-0638-422c-ad10-b1903f17b119" />
+<img width="291" height="648" alt="image" src="https://github.com/user-attachments/assets/6672a4df-1ab9-42d6-a26f-0f94e0fa01e0" />
+<img width="291" height="648" alt="image" src="https://github.com/user-attachments/assets/c1ccc3b9-a9a2-4ea5-b2a4-c6e34b2731eb" />
+<img width="103" height="229" alt="image" src="https://github.com/user-attachments/assets/764bdd9f-8da9-4843-955c-ecb41efb80f7" />
+<img width="103" height="228" alt="image" src="https://github.com/user-attachments/assets/07afbfa5-aea8-41b6-b878-c95178bbc464" />
+
+
+
 **Here’s the YouTube link to the video.**
 https://youtu.be/QZ5qhrIetkU
 
