@@ -43,10 +43,13 @@ Team Members
 🧩 Architecture Overview
 The application follows a clean MVVM architecture:
 * UI Layer
+		
 		Jetpack Compose screens responsible for rendering UI and handling user interactions.
 * ViewModel Layer
+		
 		Manages UI state, business logic, and lifecycle awareness.
 * Data Layer (Planned)
+		
 		Repository-based data handling for mood history and analytics.
 This structure ensures scalability, testability, and maintainability.
 
