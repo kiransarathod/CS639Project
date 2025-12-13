@@ -1,9 +1,9 @@
-🧘 Mindful Minutes
+**🧘 Mindful Minutes**
 CS639 – Mobile App Development Project
 
 Mindful Minutes is a lightweight Android mental-wellness application designed to help users quickly check in with their emotions, manage daily stress, and practice short mindfulness exercises — all within a few minutes a day.
 
-👥 Team Members
+**👥 Team Members**
 
 Kiran Rathod
 
@@ -11,10 +11,10 @@ Arun Garwan
 
 Kushwanth Reddy
 
-✨ Key Features
+**✨ Key Features**
 ✅ Implemented
 
-🏠 Home Screen
+**🏠 Home Screen**
 Intuitive navigation to all core features
 
 😊 Mood Check-In
@@ -31,7 +31,7 @@ Animated breathing cycles using Jetpack Compose
 
 Timed inhale and exhale prompts
 
-📊 Trends Screen
+**📊 Trends Screen**
 Screen structure and navigation implemented
 
 🛠 Technology Stack
@@ -42,7 +42,7 @@ UI Framework	Jetpack Compose
 Architecture	MVVM
 State Management	ViewModel + Compose State
 Storage	SharedPreferences / Firebase (planned)
-🧩 Architecture Overview
+**🧩 Architecture Overview**
 
 The application follows a clean MVVM architecture:
 
@@ -57,7 +57,7 @@ Repository-based data handling for mood history and analytics.
 
 This structure ensures scalability, testability, and maintainability.
 
-🚀 Getting Started
+**🚀 Getting Started**
 Prerequisites
 
 Android Studio Hedgehog or newer
@@ -74,7 +74,7 @@ Sync Gradle files
 
 Run the app on an emulator or physical device
 
-📌 Project Status
+**📌 Project Status**
 
 Core UI and navigation: Completed
 
