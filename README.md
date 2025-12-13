@@ -34,16 +34,6 @@ Timed inhale and exhale prompts
 📊 Trends Screen
 Screen structure and navigation implemented
 
-🚧 Upcoming
-
-Mood data persistence
-
-Mood history tracking
-
-Charts and trends visualization
-
-UI themes and visual enhancements
-
 🛠 Technology Stack
 Category	Tools
 Platform	Android
