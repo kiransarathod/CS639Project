@@ -27,9 +27,9 @@ Team Members
 
 🚧 Upcoming
 Mood data persistence
-Mood history tracking
-Charts and trends visualization
-UI themes and visual enhancements
+/nMood history tracking
+/nCharts and trends visualization
+/nUI themes and visual enhancements
 
 | Category         | Tools                                    |
 | ---------------- | ---------------------------------------- |
