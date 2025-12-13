@@ -31,14 +31,14 @@ Mood history tracking
 Charts and trends visualization
 UI themes and visual enhancements
 
-🛠 Technology Stack
-	Category																	Tools
-	Platform																	Android
-	Language																	Kotlin
-	UI Framework															Jetpack Compose
-	Architecture															MVVM
-	State Management													ViewModel + Compose State
-	Storage																		SharedPreferences / Firebase (planned)
+| Category         | Tools                                    |
+| ---------------- | ---------------------------------------- |
+| Platform         | Android                                  |
+| Language         | Kotlin                                   |
+| UI Framework     | Jetpack Compose                          |
+| Architecture     | MVVM                                     |
+| State Management | ViewModel + Compose State                |
+| Storage          | SharedPreferences / Firebase *(planned)* |
 
 🧩 Architecture Overview
 The application follows a clean MVVM architecture:
@@ -57,6 +57,7 @@ Prerequisites
 
 Installation
   - git clone git@github.com:kiransarathod/CS639Project.git
+
 1.Open the project in Android Studio
 2.Sync Gradle files
 3.Run the app on an emulator or physical device
