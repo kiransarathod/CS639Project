@@ -59,7 +59,9 @@ Installation
   - git clone git@github.com:kiransarathod/CS639Project.git
 
 1.Open the project in Android Studio
+
 2.Sync Gradle files
+
 3.Run the app on an emulator or physical device
 
 📌 Project Status
