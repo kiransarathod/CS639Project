@@ -35,13 +35,15 @@ Timed inhale and exhale prompts
 Screen structure and navigation implemented
 
 🛠 Technology Stack
-Category	Tools
-Platform	Android
-Language	Kotlin
-UI Framework	Jetpack Compose
-Architecture	MVVM
-State Management	ViewModel + Compose State
-Storage	SharedPreferences / Firebase (planned)
+| Category         | Tools                                    |
+| ---------------- | ---------------------------------------- |
+| Platform         | Android                                  |
+| Language         | Kotlin                                   |
+| UI Framework     | Jetpack Compose                          |
+| Architecture     | MVVM                                     |
+| State Management | ViewModel + Compose State                |
+| Storage          | SharedPreferences / Firebase *(planned)* |
+
 **🧩 Architecture Overview**
 
 The application follows a clean MVVM architecture:
@@ -73,6 +75,10 @@ Open the project in Android Studio
 Sync Gradle files
 
 Run the app on an emulator or physical device
+
+Install Apk 
+[![Download APK](https://img.shields.io/badge/Download-APK-blue?style=for-the-badge)](https://github.com/kiransarathod/CS639Project/raw/main/MindfulMinutes.apk)
+
 
 **📌 Project Status**
 
