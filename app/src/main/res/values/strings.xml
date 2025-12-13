@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Mindful Minutes</string>
+    <string name="home_screen_title">Mindful Minutes</string>
+    <string name="mood_check_in_button">Mood Check-In</string>
+    <string name="breathing_button">1-Minute Breathing</string>
+    <string name="mood_trends_button">Mood Trends</string>
+    <string name="welcome_message">Welcome back, User!</string>
+    <string name="daily_quote">“The best time to relax is when you don’t have time for it.”</string>
+    <string name="mood_check_in_description">Log your current mood to track your emotional well-being.</string>
+    <string name="breathing_description">A short, guided breathing exercise to calm your mind.</string>
+    <string name="mood_trends_description">Visualize your mood patterns over time.</string>
+
+    <!-- Breathing Screen -->
+    <string name="breathing_instruction">Find a comfortable position. Let’s take a minute to just breathe.</string>
+    <string name="breathing_start_button">Start</string>
+    <string name="breathing_inhale">Inhale</string>
+    <string name="breathing_hold">Hold</string>
+    <string name="breathing_exhale">Exhale</string>
+    <string name="breathing_complete">Well done. Carry this peace with you.</string>
+
+    <!-- Mood Check-In Screen -->
+    <string name="mood_check_in_intro">How are you feeling in this moment? There’s no right or wrong answer. Simply noticing is the first step.</string>
+    <string name="mood_joyful">😄 Joyful</string>
+    <string name="mood_content">😊 Content</string>
+    <string name="mood_neutral">😐 Neutral</string>
+    <string name="mood_anxious">🤔 Anxious</string>
+    <string name="mood_stressed">😕 Stressed</string>
+    <string name="mood_sad">😔 Sad</string>
+    <string name="mood_irritated">😠 Irritated</string>
+    <string name="mood_tired">😴 Tired</string>
+    <string name="mood_note_placeholder">Add a note (optional)...</string>
+    <string name="mood_save_button">Save Mood</string>
+    <string name="mood_save_confirmation">Thank you for sharing. Your feelings are valid.</string>
+
+</resources>
