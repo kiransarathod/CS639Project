@@ -1,68 +1,67 @@
 # CS639 Project – Mindful Minutes
 
 ## Idea Proposal & Research
-[Mindful Minutes](https://paceuniversity-my.sharepoint.com/:w:/r/personal/kr45959n_pace_edu/Documents/CS639%20Idea%20Proposal%20-%20Team%204.docx?d=w4995f35e52e84f62996c33d634415764&csf=1&web=1&e=oXHHGB)
+Mindful Minutes is a lightweight Android mental-wellness application designed to help users quickly check in with their emotions, manage daily stress, and practice short mindfulness exercises — all within a few minutes a day.
 
-
-## Team Members
-
+Team Members 
 - Kiran Rathod
 - Arun Garwan
 - Kushwanth Reddy
 
-This repository contains the design, documentation, and source code for our CS639 Mobile App Development project.
+✨ Key Features-✅ Implemented
 
-## Project Overview
+🏠 Home Screen with intuitive navigation
 
-MindfulMinutes is a simple mental-wellness mobile application designed to help users track their mood, manage daily stress, and practice short mindfulness exercises. The goal is to provide quick, everyday tools that improve emotional awareness and reduce stress—without requiring long meditation sessions.
+😊 Mood Check-In
+Emoji-based mood selection
+Stress level rating
+Optional reflection notes
 
-## Project Proposal & Research
-- Problem Statement: Identified need for quick, accessible mental wellness tools
-- Target Users - Persona: Busy individuals seeking simple mood tracking and stress relief
-- Major Features: Mood Check-in, Guided Breathing Exercise, Mood Trends visualization
-- Research: Competitive analysis, technology stack selection (Android with Jetpack Compose)
+🌬 Guided Breathing Exercise
+Animated breathing cycles using Jetpack Compose
+Timed inhale and exhale prompts
 
-## Requirements & Design
-- Requirements specification: Functional and non-functional requirements
-- User stories and use cases: User journey mapping and edge cases
-- UI/UX design: Wireframes, mockups, and navigation flow
-- Technical architecture: System design, database schema, project structure
+📊 Trends Screen
+Screen structure and navigation implemented
 
-## Core Implementation
-- **Home Screen (MainActivity)**: Fully implemented with navigation to all screens
-- **Mood Check-in (MoodActivity)**: Interactive emoji mood buttons, stress rating, and reflection notes
-- **Breathing Exercise (BreathingActivity)**: Guided breathing with Compose animations and timed cycles
-- **Trends Screen (TrendsActivity)**: Screen structure implemented (data visualization pending)
-- **Status**: Complete UI flow and navigation working; data storage pending
+🚧 Upcoming
+Mood data persistence
+Mood history tracking
+Charts and trends visualization
+UI themes and visual enhancements
 
-## Feature Enhancement & Testing
-- Upcoming: Data storage (SharedPreferences/Firebase), mood history, charts in Trends screen, UI polish
-- Testing: Navigation flow, breathing animations, mood input functionality
-- Optimization: Code refactoring and performance improvements
+🛠 Technology Stack
+Category	Tools
+Platform	Android
+Language	Kotlin
+UI Framework	Jetpack Compose
+Architecture	MVVM
+State Management	ViewModel + Compose State
+Storage	SharedPreferences / Firebase (planned)
 
-## Final Polish & Presentation
-- Code review and documentation
-- Demo preparation and presentation
-- Project demonstration of completed features
+🧩 Architecture Overview
+The application follows a clean MVVM architecture:
+UI Layer
+Jetpack Compose screens responsible for rendering UI and handling user interactions.
+ViewModel Layer
+Manages UI state, business logic, and lifecycle awareness.
+Data Layer (Planned)
+Repository-based data handling for mood history and analytics.
+This structure ensures scalability, testability, and maintainability.
 
-## Features
+🚀 Getting Started
+Prerequisites
+Android Studio Hedgehog or newer
+Android SDK 24+
 
-### Implemented
-- Home Screen with navigation
-- Mood Check-in with emoji selection and stress rating
-- Breathing Exercise with animations
-- Trends Screen structure
+Installation
+git clone https://github.com/your-username/mindful-minutes.git
+Open the project in Android Studio
+Sync Gradle files
+Run the app on an emulator or physical device
 
-### Upcoming
-- Data persistence
-- Charts and trends visualization
-- UI themes and enhancements
-
-## Technology Stack
-
-- Platform: Android
-- UI Framework: Jetpack Compose
-- Language: Kotlin
-- Architecture: MVVM
-- Storage: SharedPreferences or Firebase (planned)
+📌 Project Status
+Core UI and navigation: Completed
+Data persistence and analytics: In progress
+Final polish and optimization: Planned
 
