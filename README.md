@@ -93,6 +93,9 @@ Data persistence and analytics: In progress
 Final polish and optimization: Planned
 
 **Here is the screenshot illustrating the app workflow.**
+
+
+
 <img width="115" height="255" alt="image" src="https://github.com/user-attachments/assets/dfa348ca-41e5-48ea-bf04-784eb26c5199" />
 <img width="115" height="255" alt="image" src="https://github.com/user-attachments/assets/cbff927a-246b-491c-8765-dd810489591f" />
 <img width="115" height="255" alt="image" src="https://github.com/user-attachments/assets/f9e28bea-0638-422c-ad10-b1903f17b119" />
