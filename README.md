@@ -1,11 +1,97 @@
-# CS639 Project – Mindful Minutes
+🧘 Mindful Minutes
+CS639 – Mobile App Development Project
 
-## Idea Proposal & Research
-[Mindful Minutes](https://paceuniversity-my.sharepoint.com/:w:/r/personal/kr45959n_pace_edu/Documents/CS639%20Idea%20Proposal%20-%20Team%204.docx?d=w4995f35e52e84f62996c33d634415764&csf=1&web=1&e=oXHHGB)
+Mindful Minutes is a lightweight Android mental-wellness application designed to help users quickly check in with their emotions, manage daily stress, and practice short mindfulness exercises — all within a few minutes a day.
 
-Team Members:
-- Kiran Rathod
-- Arun Garwan
-- Kushwanth Reddy
+👥 Team Members
 
-This repository contains the design, documentation, and source code for our CS639 Mobile App Development project.
+Kiran Rathod
+
+Arun Garwan
+
+Kushwanth Reddy
+
+✨ Key Features
+✅ Implemented
+
+🏠 Home Screen
+Intuitive navigation to all core features
+
+😊 Mood Check-In
+
+Emoji-based mood selection
+
+Stress level rating
+
+Optional reflection notes
+
+🌬 Guided Breathing Exercise
+
+Animated breathing cycles using Jetpack Compose
+
+Timed inhale and exhale prompts
+
+📊 Trends Screen
+Screen structure and navigation implemented
+
+🚧 Upcoming
+
+Mood data persistence
+
+Mood history tracking
+
+Charts and trends visualization
+
+UI themes and visual enhancements
+
+🛠 Technology Stack
+Category	Tools
+Platform	Android
+Language	Kotlin
+UI Framework	Jetpack Compose
+Architecture	MVVM
+State Management	ViewModel + Compose State
+Storage	SharedPreferences / Firebase (planned)
+🧩 Architecture Overview
+
+The application follows a clean MVVM architecture:
+
+UI Layer
+Jetpack Compose screens responsible for rendering UI and handling user interactions.
+
+ViewModel Layer
+Manages UI state, business logic, and lifecycle awareness.
+
+Data Layer (Planned)
+Repository-based data handling for mood history and analytics.
+
+This structure ensures scalability, testability, and maintainability.
+
+🚀 Getting Started
+Prerequisites
+
+Android Studio Hedgehog or newer
+
+Android SDK 24+
+
+Installation
+git clone git@github.com:kiransarathod/CS639Project.git
+
+
+Open the project in Android Studio
+
+Sync Gradle files
+
+Run the app on an emulator or physical device
+
+📌 Project Status
+
+Core UI and navigation: Completed
+
+Data persistence and analytics: In progress
+
+Final polish and optimization: Planned
+
+**Here’s the YouTube link to the video.**
+https://youtu.be/QZ5qhrIetkU
+
