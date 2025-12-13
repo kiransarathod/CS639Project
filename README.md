@@ -10,19 +10,20 @@ Team Members
 
 ✨ Key Features-✅ Implemented
 
-🏠 Home Screen with intuitive navigation
+* 🏠 Home Screen with 
+	Intuitive navigation to all core features
 
-😊 Mood Check-In
-Emoji-based mood selection
-Stress level rating
-Optional reflection notes
+* 😊 Mood Check-In
+	Emoji-based mood selection
+	Stress level rating
+	Optional reflection notes
 
-🌬 Guided Breathing Exercise
-Animated breathing cycles using Jetpack Compose
-Timed inhale and exhale prompts
+* 🌬 Guided Breathing Exercise
+	Animated breathing cycles using Jetpack Compose
+	Timed inhale and exhale prompts
 
-📊 Trends Screen
-Screen structure and navigation implemented
+* 📊 Trends Screen
+	Screen structure and navigation implemented
 
 🚧 Upcoming
 Mood data persistence
@@ -31,37 +32,37 @@ Charts and trends visualization
 UI themes and visual enhancements
 
 🛠 Technology Stack
-Category	Tools
-Platform	Android
-Language	Kotlin
-UI Framework	Jetpack Compose
-Architecture	MVVM
-State Management	ViewModel + Compose State
-Storage	SharedPreferences / Firebase (planned)
+	Category																	Tools
+	Platform																	Android
+	Language																	Kotlin
+	UI Framework															Jetpack Compose
+	Architecture															MVVM
+	State Management													ViewModel + Compose State
+	Storage																		SharedPreferences / Firebase (planned)
 
 🧩 Architecture Overview
 The application follows a clean MVVM architecture:
-UI Layer
-Jetpack Compose screens responsible for rendering UI and handling user interactions.
-ViewModel Layer
-Manages UI state, business logic, and lifecycle awareness.
-Data Layer (Planned)
-Repository-based data handling for mood history and analytics.
+* UI Layer
+		Jetpack Compose screens responsible for rendering UI and handling user interactions.
+* ViewModel Layer
+		Manages UI state, business logic, and lifecycle awareness.
+* Data Layer (Planned)
+		Repository-based data handling for mood history and analytics.
 This structure ensures scalability, testability, and maintainability.
 
 🚀 Getting Started
 Prerequisites
-Android Studio Hedgehog or newer
-Android SDK 24+
+* Android Studio Hedgehog or newer
+* Android SDK 24+
 
 Installation
-git clone git@github.com:kiransarathod/CS639Project.git
-Open the project in Android Studio
-Sync Gradle files
-Run the app on an emulator or physical device
+  - git clone git@github.com:kiransarathod/CS639Project.git
+1.Open the project in Android Studio
+2.Sync Gradle files
+3.Run the app on an emulator or physical device
 
 📌 Project Status
-Core UI and navigation: Completed
-Data persistence and analytics: In progress
-Final polish and optimization: Planned
+* Core UI and navigation: Completed
+* Data persistence and analytics: In progress
+* Final polish and optimization: Planned
 
