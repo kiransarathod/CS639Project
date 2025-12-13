@@ -55,7 +55,7 @@ Android Studio Hedgehog or newer
 Android SDK 24+
 
 Installation
-git clone https://github.com/your-username/mindful-minutes.git
+git clone git@github.com:kiransarathod/CS639Project.git
 Open the project in Android Studio
 Sync Gradle files
 Run the app on an emulator or physical device
