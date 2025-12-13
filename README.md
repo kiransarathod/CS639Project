@@ -26,10 +26,10 @@ Team Members
 	Screen structure and navigation implemented
 
 🚧 Upcoming
-Mood data persistence
-/nMood history tracking
-/nCharts and trends visualization
-/nUI themes and visual enhancements
+* Mood data persistence
+* Mood history tracking
+* Charts and trends visualization
+* UI themes and visual enhancements
 
 | Category         | Tools                                    |
 | ---------------- | ---------------------------------------- |
